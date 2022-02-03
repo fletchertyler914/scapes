@@ -1,5 +1,6 @@
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import Link from 'next/link';
-import { MobileMenu, WalletButton } from '..';
+import { MobileMenu } from '..';
 import './header.module.scss';
 
 /* eslint-disable-next-line */
@@ -13,11 +14,6 @@ export const Header = ({ ScapesLogo }: HeaderProps) => (
       <div className="header">
         <Link href="/">
           <>
-            {/* <img
-              className="logo__img img-responsive"
-              src={scapesLogo}
-              alt="Scapes logo"
-            /> */}
             <ScapesLogo />
             <span className="logo__text font-podkova">SCAPES</span>
           </>
@@ -31,7 +27,7 @@ export const Header = ({ ScapesLogo }: HeaderProps) => (
           <Link href="/my-scapes">My Scapes</Link>
         </nav>
         <span className="show-md flex">
-          <WalletButton />
+          <WalletMultiButton className='wallet-adapter-button' />
         </span>
       </div>
     </div>
