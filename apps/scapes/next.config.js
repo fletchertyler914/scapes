@@ -12,14 +12,7 @@ const nextConfig = {
   },
   images: {
     domains: ['www.facebook.com'],
-  },
-  webpack: (config) => {
-    // Important: return the modified config
-    config.resolve.fallback = {
-      stream: require.resolve('stream-browserify'),
-    };
-    return config;
-  },
+  }
 };
 
 module.exports = withNx(nextConfig);
