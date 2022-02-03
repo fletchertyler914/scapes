@@ -1,26 +1,24 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { MobileMenu, WalletButton } from '..';
 import './header.module.scss';
 
 /* eslint-disable-next-line */
 export interface HeaderProps {
-  logo: StaticImageData;
+  ScapesLogo: any;
 }
 
-export const Header = ({ logo }: HeaderProps) => (
+export const Header = ({ ScapesLogo }: HeaderProps) => (
   <header>
     <div className="container">
       <div className="header">
         <Link href="/">
           <>
-            <Image
+            {/* <img
               className="logo__img img-responsive"
-              src={logo}
+              src={scapesLogo}
               alt="Scapes logo"
-              width={45}
-              height={45}
-            />
+            /> */}
+            <ScapesLogo />
             <span className="logo__text font-podkova">SCAPES</span>
           </>
         </Link>

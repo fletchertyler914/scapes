@@ -4,15 +4,33 @@ import './layout.module.scss';
 /* eslint-disable-next-line */
 export interface LayoutProps {
   children: React.ReactNode;
-  logo: StaticImageData;
+  ScapesLogo: any;
+  DiscordIcon: any;
+  TelegramIcon: any;
+  TwitterIcon: any;
+  MediumIcon: any;
 }
 
-export function Layout({ children, logo }: LayoutProps) {
+export function Layout({
+  children,
+  ScapesLogo,
+  DiscordIcon,
+  TelegramIcon,
+  TwitterIcon,
+  MediumIcon,
+}: LayoutProps) {
+  const footerProps = {
+    ScapesLogo,
+    DiscordIcon,
+    TelegramIcon,
+    TwitterIcon,
+    MediumIcon,
+  };
   return (
     <>
-      <Header logo={logo} />
+      <Header ScapesLogo={ScapesLogo} />
       <main className="app">{children}</main>
-      <Footer />
+      <Footer {...footerProps} />
     </>
   );
 }

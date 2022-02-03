@@ -3,8 +3,22 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import Script from 'next/script';
 import Image from 'next/image';
-import logo from '../public/media/logo.png';
+
+import { ReactComponent as ScapesLogo } from '../public/media/scapes-logo.svg';
+import { ReactComponent as DiscordIcon } from '../public/media/discord-icon.svg';
+import { ReactComponent as TelegramIcon } from '../public/media/telegram-icon.svg';
+import { ReactComponent as TwitterIcon } from '../public/media/twitter-icon.svg';
+import { ReactComponent as MediumIcon } from '../public/media/md.svg';
+
 import './styles.scss';
+
+const layoutProps = {
+  ScapesLogo,
+  DiscordIcon,
+  TelegramIcon,
+  TwitterIcon,
+  MediumIcon,
+};
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <>
@@ -46,7 +60,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
       />
     </noscript>
 
-    <Layout logo={logo}>
+    <Layout {...layoutProps}>
       <Component {...pageProps} />
     </Layout>
   </>

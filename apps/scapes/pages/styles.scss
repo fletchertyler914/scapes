@@ -2,11 +2,24 @@
 @import 'grid';
 
 body {
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   overflow-x: hidden;
   color: #000;
   margin: 0;
 }
+
+#__next {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+// // Always fill the screen and put footer on the bottom
+// .app {
+//   max-height: calc(100vh - 209px);
+// }
 
 header {
   background: #fafafa;
