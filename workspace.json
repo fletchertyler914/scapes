@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "scapes": "apps/scapes",
-    "scapes-e2e": "apps/scapes-e2e"
+    "scapes-e2e": "apps/scapes-e2e",
+    "ui": "libs/ui"
   }
 }
