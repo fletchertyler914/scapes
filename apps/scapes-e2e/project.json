@@ -1,0 +1,28 @@
+{
+  "root": "apps/scapes-e2e",
+  "sourceRoot": "apps/scapes-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/scapes-e2e/cypress.json",
+        "devServerTarget": "scapes:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "scapes:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/scapes-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["scapes"]
+}
